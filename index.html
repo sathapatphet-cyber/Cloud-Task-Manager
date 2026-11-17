@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloud Task Manager | AWS</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header><div><p class="eyebrow">CS446 / IT332 · AWS Cloud</p><h1>Cloud Task Manager</h1><p class="subtitle">A simple task manager powered by S3, API Gateway, Lambda and DynamoDB.</p></div><span class="pill">AWS Project</span></header>
+    <section class="panel">
+      <h2>Add a task</h2>
+      <form id="taskForm">
+        <label for="title">Task title</label>
+        <input id="title" name="title" maxlength="120" required placeholder="e.g. Prepare demo video">
+        <label for="description">Description (optional)</label>
+        <textarea id="description" name="description" maxlength="500" rows="3" placeholder="What needs to be done?"></textarea>
+        <button id="submitButton" type="submit">+ Add task</button>
+      </form>
+    </section>
+    <section class="panel" aria-live="polite">
+      <div class="section-head"><h2>My tasks <span id="count">0</span></h2><button class="secondary" type="button" id="refreshButton">Refresh</button></div>
+      <p id="message" role="status"></p>
+      <div id="taskList"></div>
+    </section>
+    <footer>Demo project · Do not enter private information · Public unauthenticated API</footer>
+  </main>
+</body>
+</html>
